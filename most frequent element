@@ -1,0 +1,30 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+int main() {
+    int n;
+    cout << "Enter the number of elements in the array: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+    unordered_map<int, int> freq;
+    for (int i = 0; i < n; ++i) {
+        freq[arr[i]]++;
+    }
+
+    int mostFrequent = arr[0];
+    int maxCount = 0;
+    for (auto it : freq) {
+        if (it.second > maxCount) {
+            maxCount = it.second;
+            mostFrequent = it.first;
+        }
+    }
+    cout << "The most frequent element is: " << mostFrequent << endl;
+    cout << "It appears " << maxCount << " times." << endl;
+
+    return 0;
+}

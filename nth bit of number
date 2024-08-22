@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num, n;
+    cout << "Enter the number: ";
+    cin >> num;
+    cout << "Enter the bit position to set (0-indexed): ";
+    cin >> n;
+    if (n >= 0) {
+        num = num | (1 << n);
+        cout << "The number after setting the " << n << "th bit is: " << num << endl;
+    } else {
+        cout << "Invalid bit position! Position should be a non-negative integer." << endl;
+    }
+    return 0;
+}

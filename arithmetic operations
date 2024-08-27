@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+    int num1, num2;
+
+    // Input two integers
+    std::cout << "Enter the first integer: ";
+    std::cin >> num1;
+    std::cout << "Enter the second integer: ";
+    std::cin >> num2;
+
+    // Perform the arithmetic operations
+    int addition = num1 + num2;
+    int subtraction = num1 - num2;
+    int multiplication = num1 * num2;
+    
+    // Check for division by zero
+    if (num2 != 0) {
+        int division = num1 / num2;
+        int modulo = num1 % num2;
+
+        // Output the results
+        std::cout << "Addition: " << num1 << " + " << num2 << " = " << addition << std::endl;
+        std::cout << "Subtraction: " << num1 << " - " << num2 << " = " << subtraction << std::endl;
+        std::cout << "Multiplication: " << num1 << " * " << num2 << " = " << multiplication << std::endl;
+        std::cout << "Division: " << num1 << " / " << num2 << " = " << division << std::endl;
+        std::cout << "Modulo: " << num1 << " % " << num2 << " = " << modulo << std::endl;
+    } else {
+        std::cout << "Division and modulo by zero are not allowed!" << std::endl;
+    }
+
+    return 0;
+}
